@@ -2,7 +2,7 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/web-app-python.herokuapp.com/')
 def hello():
     return jsonify(message='Hello, World!')
 
