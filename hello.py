@@ -1,14 +1,10 @@
-from flask import Flask, request
+from flask import Flask, jsonify
+
 app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hello, World!'
-
-@app.route('/greet', methods=['POST'])
-def greet():
-    name = request.form['name']
-    return f'Hello, {name}!'
+    return jsonify(message='Hello, World!')
 
 if __name__ == '__main__':
     app.run()
